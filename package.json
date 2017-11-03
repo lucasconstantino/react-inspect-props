@@ -1,0 +1,61 @@
+{
+  "name": "react-inspect-props",
+  "version": "0.1.0",
+  "description": "React properties inspector with the power of Redux DevTools",
+  "main": "lib/react-inspect-props.js",
+  "files": [
+    "*.md",
+    "LICENSE",
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "build": "mkdir -p lib && babel ./src --out-dir ./lib",
+    "lint": "eslint src",
+    "prepublish": "rm -rf lib && npm run lint && npm run test && npm run build",
+    "test": "jest --verbose --no-cache"
+  },
+  "authors": [
+    "Lucas Constantino Silva"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-eslint": "^6.0.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "babel-runtime": "^6.9.2",
+    "enzyme": "^2.9.1",
+    "eslint": "^3.0.1",
+    "eslint-config-standard": "^5.3.5",
+    "eslint-config-standard-react": "^2.5.1",
+    "eslint-plugin-promise": "^1.3.2",
+    "eslint-plugin-react": "^5.2.2",
+    "eslint-plugin-standard": "^2.0.0",
+    "jest": "^19.0.2",
+    "react": "^15.3.1",
+    "react-addons-test-utils": "^15.5.1",
+    "react-dom": "^15.5.4"
+  },
+  "peerDependencies": {
+    "react": "^15.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasconstantino/react-inspect-props.git"
+  },
+  "keywords": [
+    "react",
+    "data",
+    "fetch",
+    "request",
+    "client",
+    "api"
+  ],
+  "bugs": {
+    "url": "https://github.com/lucasconstantino/react-inspect-props/issues"
+  },
+  "homepage": "https://github.com/lucasconstantino/react-inspect-props#readme",
+  "dependencies": {}
+}
