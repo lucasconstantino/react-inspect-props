@@ -1,5 +1,11 @@
 import React from 'react'
 
+/**
+ * Properties inspector HoC.
+ *
+ * @param {String} name Inspector instance name.
+ * @param {Object|Function} options Options to provide the inspector connection.
+ */
 export const inspectProps = (name, options = {}) => ComposedComponent => {
   const hasReduxDevtools = typeof window !== 'undefined' && !!window.__REDUX_DEVTOOLS_EXTENSION__
 
