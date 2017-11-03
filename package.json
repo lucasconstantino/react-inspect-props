@@ -26,7 +26,8 @@
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-0": "^6.3.13",
     "babel-runtime": "^6.9.2",
-    "enzyme": "^2.9.1",
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.3",
     "eslint": "^3.0.1",
     "eslint-config-standard": "^5.3.5",
     "eslint-config-standard-react": "^2.5.1",
@@ -34,9 +35,9 @@
     "eslint-plugin-react": "^5.2.2",
     "eslint-plugin-standard": "^2.0.0",
     "jest": "^19.0.2",
-    "react": "^15.3.1",
+    "react": "^16.0.0",
     "react-addons-test-utils": "^15.5.1",
-    "react-dom": "^15.5.4"
+    "react-dom": "^16.0.0"
   },
   "peerDependencies": {
     "react": "^15.3.1"
@@ -56,6 +57,5 @@
   "bugs": {
     "url": "https://github.com/lucasconstantino/react-inspect-props/issues"
   },
-  "homepage": "https://github.com/lucasconstantino/react-inspect-props#readme",
-  "dependencies": {}
+  "homepage": "https://github.com/lucasconstantino/react-inspect-props#readme"
 }
