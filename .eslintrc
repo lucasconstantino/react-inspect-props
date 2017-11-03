@@ -1,7 +1,8 @@
 {
   env: { es6: true },
   parser: "babel-eslint",
-  extends: [ "standard" ],
+  plugins: ["react"],
+  extends: [ "standard", "standard-react" ],
   globals: {
     $: false,
     jest: false,
@@ -28,6 +29,13 @@
     "no-mixed-requires": [1, false],
     "react/wrap-multilines": 2,
     "no-unsafe-finally": 0,
-    "no-useless-computed-key": 0
+    "no-useless-computed-key": 0,
+
+    "react/prop-types": 0,
+    "react/jsx-uses-react": 1,
+    "react/jsx-no-undef": 2,
+    "react/jsx-sort-props": 0,
+    "react/jsx-sort-prop-types": 0,
+    "react/jsx-curly-spacing": ["error", "always"]
   }
 }
