@@ -39,6 +39,8 @@ const Counter = ({ count, setCount }) => (
 export default inspectProps('Counter inspector')(Counter)
 ```
 
+> See a demo video: https://www.useloom.com/share/abaf237e04e94ac8a9f694e1cc063e4f
+
 ## License
 
 Copyright (c) 2017 Lucas Constantino Silva
