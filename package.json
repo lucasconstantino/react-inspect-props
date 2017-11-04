@@ -1,6 +1,6 @@
 {
   "name": "react-inspect-props",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "React properties inspector with the power of Redux DevTools",
   "main": "lib/react-inspect-props.js",
   "files": [
