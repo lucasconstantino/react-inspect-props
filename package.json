@@ -57,5 +57,8 @@
   "bugs": {
     "url": "https://github.com/lucasconstantino/react-inspect-props/issues"
   },
-  "homepage": "https://github.com/lucasconstantino/react-inspect-props#readme"
+  "homepage": "https://github.com/lucasconstantino/react-inspect-props#readme",
+  "dependencies": {
+    "deepmerge": "^2.0.1"
+  }
 }
