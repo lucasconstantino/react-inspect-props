@@ -28,18 +28,31 @@ The second argument is optional. If provided, the object will be used when conne
 ### Simple as can
 
 ```js
+import React from 'react'
+import { compose, withState } from 'recompose'
 import { inspectProps } from 'react-inspect-props'
 
 const Counter = ({ count, setCount }) => (
   <div>
-    <button onClick={ () => setCount(++count) }>Increment counter</button>
+    <button onClick={ () => setCount(++count) }>
+      Increment
+    </button>
+    <pre>{ count }</pre>
   </div>
 )
 
-export default inspectProps('Counter inspector')(Counter)
+export default compose(
+  withState('count', 'setCount', 0),
+  inspectProps('Counter inspector')
+)(Counter)
+
 ```
 
 > See a demo video: https://www.useloom.com/share/abaf237e04e94ac8a9f694e1cc063e4f
+
+### Disable on production
+
+
 
 ## License
 
