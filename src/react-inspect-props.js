@@ -1,4 +1,21 @@
 import React from 'react'
+import merge from 'deepmerge'
+
+const defaultOptions = {
+  features: {
+    pause: true, // start/pause recording of dispatched actions
+    lock: true, // lock/unlock dispatching actions and side effects
+    export: true, // export history of actions in a file
+    import: 'custom', // import history of actions from a file
+    jump: true, // jump back and forth (time travelling)
+
+    skip: false, // Cannot skip for we cannot replay.
+    reorder: false, // Cannot skip for we cannot replay.
+    persist: false, // Avoid trying persistence.
+    dispatch: false,
+    test: false,
+  }
+}
 
 /**
  * Properties inspector HoC.
@@ -17,18 +34,25 @@ export const inspectProps = (name, options = {}) => ComposedComponent => {
   return class PropsInspector extends React.Component {
     constructor (props) {
       super(props)
-
       this.state = {
         connection: null,
         props: this.props
       }
     }
 
+    getOptions () {
+      return merge(defaultOptions, typeof options === 'function' ? options(this.props) : options)
+    }
+
     componentWillMount () {
-      const config = typeof options === 'function' ? options(this.props) : options
-      const connection = window.__REDUX_DEVTOOLS_EXTENSION__.connect({ name, ...config })
+      const connection = window.__REDUX_DEVTOOLS_EXTENSION__.connect({
+        name,
+        ...this.getOptions()
+      })
+
       connection.init(this.props)
       connection.subscribe(this.dispatch)
+
       this.setState({ connection })
     }
 
@@ -41,9 +65,10 @@ export const inspectProps = (name, options = {}) => ComposedComponent => {
       this.state.connection.send({ type: 'componentWillReceiveProps' }, props)
     }
 
-    dispatch = ({ type, state }) => {
-      if (type === 'DISPATCH' && state) {
-        console.log({ state, props: JSON.parse(state) })
+    dispatch = ({ type, state, payload }) => {
+      if (type === 'DISPATCH' && (
+        payload.type === 'JUMP_TO_STATE' || payload.type === 'JUMP_TO_ACTION'
+      )) {
         this.setState({ props: JSON.parse(state) })
       }
     }
