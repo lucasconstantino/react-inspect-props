@@ -1,4 +1,4 @@
-# React Inspect Props [![Build Status](https://travis-ci.org/lucasconstantino/react-inspect-props.svg?branch=master)](https://travis-ci.org/lucasconstantino/react-inspect-props)
+# React Inspect Props [![Build Status](https://travis-ci.org/lucasconstantino/react-inspect-props.svg?branch=master)](https://travis-ci.org/lucasconstantino/react-inspect-props) [![Greenkeeper badge](https://badges.greenkeeper.io/lucasconstantino/react-inspect-props.svg)](https://greenkeeper.io/)
 
 > React properties inspector with the power of Redux DevTools
 
