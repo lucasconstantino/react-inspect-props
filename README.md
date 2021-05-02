@@ -23,7 +23,7 @@ inspectProps(
 
 This HoC will transparently connect your component to a new instance of the the Redux DevTools extension, identified by the name provided as first argument.
 
-The second argument is optional. If provided, the object will be used when connecting to the extension. If a function is provided, it will eb executed passing pros as the argument. Refer to the [documentation](http://extension.remotedev.io/docs/API/Arguments.html) of that method for more info.
+The second argument is optional. If provided, the object will be used when connecting to the extension. If a function is provided, it will be executed passing pros as the argument. Refer to the [documentation](http://extension.remotedev.io/docs/API/Arguments.html) of that method for more info.
 
 ### Simple as can
 
